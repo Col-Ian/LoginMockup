@@ -18,7 +18,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.loginmockup.R
+import com.example.loginmockup.components.ButtonComponent
 import com.example.loginmockup.components.CheckboxComponent
+import com.example.loginmockup.components.ClickableLoginTextComponent
+import com.example.loginmockup.components.DividerTextComponent
 import com.example.loginmockup.components.HeadingTextComponent
 import com.example.loginmockup.components.MyTextField
 import com.example.loginmockup.components.NormalTextComponent
@@ -59,6 +62,12 @@ fun SignUpScreen() {
                 onTextSelected = {
                     PostOfficeAppRouter.navigateTo(Screen.TermsAndConditionsScreen)
                 })
+            Spacer(modifier = Modifier.height(80.dp))
+            ButtonComponent(value = stringResource(id = R.string.register))
+
+            DividerTextComponent()
+
+            ClickableLoginTextComponent(onTextSelected = {})
         }
 
     }
